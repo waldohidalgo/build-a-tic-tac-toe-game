@@ -72,7 +72,11 @@ export default function Tablero() {
           <p className="text-center font-bold">
             Turn to: {win ? "-" : turn === "X" ? "X" : "O (💻)"}
           </p>
-          {win && <p className="text-center">Winner: {win}</p>}
+          {win && (
+            <p className="text-center">
+              Winner: {win === "draw" ? "Draw!" : win}
+            </p>
+          )}
         </div>
         <button
           className="inline-block  p-2 rounded-2xl bg-white border border-black shadow-[2px_3px_0px_0px_black] hover:bg-blue-500 hover:text-white"

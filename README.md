@@ -1,36 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Build a Tic Tac Toe Game
 
-## Getting Started
+Repositorio del challenge [Build a Tic Tac Toe Game](https://www.freecodecamp.org/learn/coding-interview-prep/take-home-projects/build-a-tic-tac-toe-game) el cual es requisito obligatorio para obtener la **Legacy Front End Certification** de freecodecamp.
 
-First, run the development server:
+El proyecto implementa un algoritmo **Minimax** para averiguar la mejor posición de jugada para el computador. Destaco la siguiente [fuente](https://www.freecodecamp.org/news/how-to-make-your-tic-tac-toe-game-unbeatable-by-using-the-minimax-algorithm-9d690bad4b37/) en la cual se explica el algoritmo.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tabla de Contenidos
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Proyecto Aprobado
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Screenshots
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### 1-Estado Inicial
 
-## Learn More
+![Estado Inicial Screenshot](./screenshots/home.webp)
 
-To learn more about Next.js, take a look at the following resources:
+### 2-Estado existencia de Ganador
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![Estado existencia de Ganador Screenshot](./screenshots/winner.webp)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### 3-Estado Empate
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![Estado Empate Screenshot](./screenshots/draw.webp)

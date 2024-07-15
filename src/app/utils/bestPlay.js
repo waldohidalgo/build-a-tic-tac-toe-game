@@ -41,9 +41,9 @@ export default class BestPlay {
       [2, 0],
     ],
   ];
-  checkWinner(tablero) {
-    //tablero es un array de arrays
 
+  //tablero es un array de arrays
+  checkWinner(tablero) {
     for (let i = 0; i < BestPlay.combinacionesGanadoras.length; i++) {
       const [a, b, c] = BestPlay.combinacionesGanadoras[i];
 
@@ -55,7 +55,7 @@ export default class BestPlay {
         return tablero[a[0]][a[1]];
       }
     }
-    return tablero.flat().includes("") ? null : "Draw!";
+    return tablero.flat().includes("") ? null : "draw";
   }
 
   minimax(board, depth, isMaximizing) {
