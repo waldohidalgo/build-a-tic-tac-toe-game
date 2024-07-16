@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Tablero from "./components/Tablero";
 export default function Home() {
   return (
@@ -7,8 +6,10 @@ export default function Home() {
         <h1 className="text-3xl font-bold underline text-center">
           Tic Tac Toe
         </h1>
-        <p className="text-center py-3">
-          User play as X and Computer play as O
+        <p className="text-center py-3 max-w-[400px] mx-auto">
+          First of all you must choose if you want to play with X or O then the
+          game starts and when it ends it, takes 1 second to start a new game
+          automatically.
         </p>
       </header>
       <main className="bg-yellow-100">

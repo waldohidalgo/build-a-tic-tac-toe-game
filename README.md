@@ -10,14 +10,22 @@ El proyecto implementa un algoritmo **Minimax** para averiguar la mejor posició
 
 ## Screenshots
 
-### 1-Estado Inicial
+### 1-UI inicial
 
-![Estado Inicial Screenshot](./screenshots/home.webp)
+![UI inicial screenshot](./screenshots/home.webp)
 
-### 2-Estado existencia de Ganador
+### 2-Selector de X para jugar
 
-![Estado existencia de Ganador Screenshot](./screenshots/winner.webp)
+![Selector de X para jugar screenshot](./screenshots/game_X.webp)
 
-### 3-Estado Empate
+### 3-Selector de O para jugar
 
-![Estado Empate Screenshot](./screenshots/draw.webp)
+![Selector de O para jugar screenshot](./screenshots/game_O.webp)
+
+### 4-Draw
+
+![Draw screenshot](./screenshots/draw.webp)
+
+### 5-Winner
+
+![Winner screenshot](./screenshots/winner.webp)

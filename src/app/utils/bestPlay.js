@@ -93,31 +93,54 @@ export default class BestPlay {
     }
   }
 
-  findBestMove(board) {
-    let bestScore = -Infinity;
-    let iMove = -1;
-    let jMove = -1;
-    for (let i = 0; i < board.length; i++) {
-      for (let j = 0; j < board.length; j++) {
-        if (board[i][j] === "") {
-          board[i][j] = "O";
-          const score = this.minimax(board, 0, false);
-          board[i][j] = "";
-          if (score > bestScore) {
-            bestScore = score;
-            iMove = i;
-            jMove = j;
+  findBestMove(board, player) {
+    if (player === "O") {
+      let bestScore = -Infinity;
+      let iMove = -1;
+      let jMove = -1;
+      for (let i = 0; i < board.length; i++) {
+        for (let j = 0; j < board.length; j++) {
+          if (board[i][j] === "") {
+            board[i][j] = "O";
+            const score = this.minimax(board, 0, false);
+            board[i][j] = "";
+            if (score > bestScore) {
+              bestScore = score;
+              iMove = i;
+              jMove = j;
+            }
           }
         }
       }
+      return [iMove, jMove];
     }
-    return [iMove, jMove];
+
+    if (player === "X") {
+      let bestScore = Infinity;
+      let iMove = -1;
+      let jMove = -1;
+      for (let i = 0; i < board.length; i++) {
+        for (let j = 0; j < board.length; j++) {
+          if (board[i][j] === "") {
+            board[i][j] = "X";
+            const score = this.minimax(board, 0, true);
+            board[i][j] = "";
+            if (score < bestScore) {
+              bestScore = score;
+              iMove = i;
+              jMove = j;
+            }
+          }
+        }
+      }
+      return [iMove, jMove];
+    }
   }
 
-  getBestMoveTimeSpacing(matrix, time) {
+  getBestMoveTimeSpacing(matrix, player, time) {
     return new Promise((resolve) => {
       setTimeout(() => {
-        resolve(this.findBestMove(matrix));
+        resolve(this.findBestMove(matrix, player));
       }, time);
     });
   }
